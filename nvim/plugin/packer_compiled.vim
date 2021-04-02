@@ -48,6 +48,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+  },
   indentLine = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/indentLine"
