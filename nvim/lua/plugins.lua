@@ -26,8 +26,10 @@ return require('packer').startup(function(use)
 
   -- Autocomplete with snippet stuff
   use {'nvim-lua/completion-nvim'}
-  use {'hrsh7th/vim-vsnip'}
-  use {'hrsh7th/vim-vsnip-integ'}
+  use {'SirVer/ultisnips'}
+  use {'honza/vim-snippets'}
+  -- use {'hrsh7th/vim-vsnip'}
+  -- use {'hrsh7th/vim-vsnip-integ'}
   use {'polypus74/trusty_rusty_snippets'}
 
   -- Colorscheme

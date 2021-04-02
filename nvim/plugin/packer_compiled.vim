@@ -105,13 +105,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/trusty_rusty_snippets"
   },
-  ["vim-vsnip"] = {
+  ultisnips = {
     loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/ultisnips"
   },
-  ["vim-vsnip-integ"] = {
+  ["vim-snippets"] = {
     loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-snippets"
   }
 }
 

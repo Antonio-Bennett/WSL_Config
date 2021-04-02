@@ -1,6 +1,9 @@
 vim.o.completeopt = "menuone,noinsert,noselect"
-vim.cmd [[
-let g:completion_enable_snippet = 'vim-vsnip'
+vim.cmd [[ 
+let g:completion_enable_snippet = 'UltiSnips' 
+let g:UltiSnipsExpandTrigger="<c-x>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 ]]
 
 --[[vim.api.nvim_exec ([[
@@ -33,8 +36,8 @@ end
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then
     return t "<C-n>"
-  elseif vim.fn.call("vsnip#available", {1}) == 1 then
-    return t "<Plug>(vsnip-expand-or-jump)"
+  elseif vim.api.nvim_eval([[ UltiSnips#CanExpandSnippet() ]]) == 1 then
+    return vim.fn['UltiSnips#ExpandSnippetOrJump']()
   elseif check_back_space() then
     return t "<Tab>"
   else
@@ -44,8 +47,8 @@ end
 _G.s_tab_complete = function()
   if vim.fn.pumvisible() == 1 then
     return t "<C-p>"
-  elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
-    return t "<Plug>(vsnip-jump-prev)"
+  elseif vim.api.nvim_eval([[ UltiSnips#CanJumpBackwards() ]]) == 1 then
+    return vim.fn['UltiSnips#JumpBackwards']()
   else
     return t "<Plug>(completion_smart_s_tab)"
   end
