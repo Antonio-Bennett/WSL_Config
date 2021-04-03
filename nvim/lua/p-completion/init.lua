@@ -1,9 +1,9 @@
 vim.o.completeopt = "menuone,noinsert,noselect"
 vim.cmd [[ 
 let g:completion_enable_snippet = 'UltiSnips' 
-let g:UltiSnipsExpandTrigger="<c-x>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-m>"
 ]]
 
 --[[vim.api.nvim_exec ([[
