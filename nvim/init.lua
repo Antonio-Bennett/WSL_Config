@@ -10,7 +10,7 @@ require('p-bufferline')
 require('p-galaxyline')
 require('p-lsp_extensions')
 require('p-telescope')
--- require('p-treesitter')
+require('p-treesitter')
 require('p-formatter')
 require('p-indentLine')
 

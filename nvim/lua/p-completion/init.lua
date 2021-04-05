@@ -6,6 +6,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-m>"
 ]]
 
+--require('nvim-autopairs').setup()
+
 --[[vim.api.nvim_exec ([[
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"

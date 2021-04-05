@@ -66,4 +66,7 @@ return require('packer').startup(function(use)
   -- Indent Lines
   use {'Yggdroot/indentLine'}
   use {'lukas-reineke/indent-blankline.nvim'}
+
+  -- Auto pairs
+  -- use {'windwp/nvim-autopairs'}
 end)
