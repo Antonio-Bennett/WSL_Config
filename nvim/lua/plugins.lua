@@ -25,9 +25,9 @@ return require('packer').startup(function(use)
   use {'tjdevries/nlua.nvim'}
 
   -- Autocomplete with snippet stuff
-  --use {'nvim-lua/completion-nvim'}
-  --use {'SirVer/ultisnips'}
-  --use {'honza/vim-snippets'}
+  -- use {'nvim-lua/completion-nvim'}
+  -- use {'SirVer/ultisnips'}
+  -- use {'honza/vim-snippets'}
   use {'hrsh7th/nvim-compe'}
   use {'hrsh7th/vim-vsnip'}
   use {'hrsh7th/vim-vsnip-integ'}
@@ -70,4 +70,7 @@ return require('packer').startup(function(use)
 
   -- Auto pairs
   use {'windwp/nvim-autopairs'}
+
+  -- Github Integration
+  use {'pwntester/octo.nvim'}
 end)

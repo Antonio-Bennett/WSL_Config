@@ -88,6 +88,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
+  ["octo.nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/octo.nvim"
+  },
   onebuddy = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/onebuddy"

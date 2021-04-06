@@ -13,6 +13,7 @@ require('p-telescope')
 require('p-treesitter')
 require('p-formatter')
 require('p-indentLine')
+require('p-octo')
 
 -- LSP
 require('lsp')
