@@ -47,7 +47,8 @@ MUtils.tab=function()
         return npairs.esc("<C-n>")
     else
         if vim.fn["vsnip#available"](1) ~= 0 then
-            return vim.fn.feedkeys(string.format('%c%c%c(vsnip-expand-or-jump)', 0x80, 253, 83))
+            vim.fn.feedkeys(string.format('%c%c%c(vsnip-expand-or-jump)', 0x80, 253, 83))
+			return npairs.esc("")
         else
             return npairs.esc("<Tab>")
         end
@@ -59,7 +60,8 @@ MUtils.s_tab=function()
         return npairs.esc("<C-p>")
     else
         if vim.fn["vsnip#jumpable"](-1) ~= 0 then
-            return vim.fn.feedkeys(string.format('%c%c%c(vsnip-jump-prev)', 0x80, 253, 83))
+            vim.fn.feedkeys(string.format('%c%c%c(vsnip-jump-prev)', 0x80, 253, 83))
+			return npairs.esc("")
         else
             return npairs.esc("<C-h>")
         end
