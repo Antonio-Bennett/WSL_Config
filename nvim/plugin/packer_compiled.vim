@@ -117,6 +117,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/trusty_rusty_snippets"
   },
+  ["vim-rooter"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-rooter"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-vsnip"

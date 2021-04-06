@@ -52,11 +52,12 @@ return require('packer').startup(function(use)
   -- Lua extended functions such as Rust in lay hints
   use {'nvim-lua/lsp_extensions.nvim'}
 
-  -- Fuzzy Finder
+  -- Fuzzy Finder and vim rooter
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
+  use {'airblade/vim-rooter'}
 
   -- Treesitter for better parsing and therefore syntax highlighting etc
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}

@@ -14,6 +14,7 @@ require('p-treesitter')
 require('p-formatter')
 require('p-indentLine')
 require('p-octo')
+require('p-vim_rooter')
 
 -- LSP
 require('lsp')
