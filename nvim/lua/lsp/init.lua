@@ -1,6 +1,6 @@
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
-  require('completion').on_attach() -- <- This is if u have completion nvim
+  --require('completion').on_attach() -- <- This is if u have completion nvim
 
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end

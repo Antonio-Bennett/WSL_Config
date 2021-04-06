@@ -25,11 +25,12 @@ return require('packer').startup(function(use)
   use {'tjdevries/nlua.nvim'}
 
   -- Autocomplete with snippet stuff
-  use {'nvim-lua/completion-nvim'}
-  use {'SirVer/ultisnips'}
-  use {'honza/vim-snippets'}
-  -- use {'hrsh7th/vim-vsnip'}
-  -- use {'hrsh7th/vim-vsnip-integ'}
+  --use {'nvim-lua/completion-nvim'}
+  --use {'SirVer/ultisnips'}
+  --use {'honza/vim-snippets'}
+  use {'hrsh7th/nvim-compe'}
+  use {'hrsh7th/vim-vsnip'}
+  use {'hrsh7th/vim-vsnip-integ'}
   use {'polypus74/trusty_rusty_snippets'}
 
   -- Colorscheme
@@ -68,5 +69,5 @@ return require('packer').startup(function(use)
   use {'lukas-reineke/indent-blankline.nvim'}
 
   -- Auto pairs
-  -- use {'windwp/nvim-autopairs'}
+  use {'windwp/nvim-autopairs'}
 end)

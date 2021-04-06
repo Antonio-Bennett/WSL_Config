@@ -5,7 +5,7 @@ require('keymappings')
 require('colorscheme')
 
 -- Plugins
-require('p-completion')
+require('p-compe')
 require('p-bufferline')
 require('p-galaxyline')
 require('p-lsp_extensions')

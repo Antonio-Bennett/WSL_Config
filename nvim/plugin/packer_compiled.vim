@@ -36,10 +36,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
   },
-  ["completion-nvim"] = {
-    loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/completion-nvim"
-  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/formatter.nvim"
@@ -64,9 +60,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nlua.nvim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
   ["nvim-bufferline.lua"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -109,13 +113,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/trusty_rusty_snippets"
   },
-  ultisnips = {
+  ["vim-vsnip"] = {
     loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/ultisnips"
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   },
-  ["vim-snippets"] = {
+  ["vim-vsnip-integ"] = {
     loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-snippets"
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   }
 }
 
