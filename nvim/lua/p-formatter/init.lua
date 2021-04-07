@@ -1,3 +1,15 @@
+-- prettier-eslint
+local prettier = function()
+  return {
+    exe = "prettier-eslint",
+    args = {
+      "--stdin", "--stdin-filepath", vim.api.nvim_buf_get_name(0),
+      '--single-quote'
+    },
+    stdin = true
+  }
+end
+
 require('formatter').setup({
   logging = false,
   filetype = {
@@ -12,19 +24,16 @@ require('formatter').setup({
       function()
         return {exe = "lua-format", args = {"--indent-width=2"}, stdin = true}
       end
-    }
-    --[[
-    javascript = {
-        -- prettier
-       function()
-          return {
-            exe = "prettier",
-            args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), '--single-quote'},
-            stdin = true
-          }
-        end
     },
-	--]]
+    -- javascriptjsx = {prettier},
+    -- typescript.tsx = {prettier}
+    javascript = {prettier},
+    javascriptreact = {prettier},
+    typescript = {prettier},
+    typescriptreact = {prettier},
+    html = {prettier},
+    css = {prettier},
+    json = {prettier}
   }
 })
 
