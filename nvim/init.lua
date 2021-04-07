@@ -15,6 +15,7 @@ require('p-formatter')
 require('p-indentLine')
 require('p-octo')
 require('p-vim_rooter')
+require('p-colorizer')
 
 -- LSP
 require('lsp')

@@ -74,4 +74,7 @@ return require('packer').startup(function(use)
 
   -- Github Integration
   use {'pwntester/octo.nvim'}
+
+  -- Show colours of hex for example 
+  use {'norcalli/nvim-colorizer.lua'}
 end)

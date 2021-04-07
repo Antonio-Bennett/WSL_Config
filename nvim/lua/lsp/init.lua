@@ -80,10 +80,10 @@ capabilities.textDocument.codeAction = {
 }
 
 -- Snippets
--- capabilities.textDocument.completion.completionItem.snippetSupport = true;
+capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
 -- LSPs
-local servers = {"rust_analyzer", "tsserver"}
+local servers = {"rust_analyzer", "tsserver", "html", "cssls"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     capabilities = capabilities,
