@@ -19,3 +19,4 @@ require('p-colorizer')
 
 -- LSP
 require('lsp')
+-- require('lsp.lua-ls')

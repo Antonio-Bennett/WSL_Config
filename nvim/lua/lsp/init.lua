@@ -97,6 +97,7 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Lua LSP. NOTE: This replaces the calls where you would have before done `require('nvim_lsp').sumneko_lua.setup()`
+---[[
 require('nlua.lsp.nvim').setup(require('lspconfig'), {
   capabilities = capabilities,
   on_attach = on_attach,
@@ -105,7 +106,7 @@ require('nlua.lsp.nvim').setup(require('lspconfig'), {
     suggestFromUnimportedLibraries = true,
     closingLabels = true
   }
-})
+}) -- ]]
 
 --[[
  -- orignal line : local servers = {'pyright', 'gopls', 'rust_analyzer'}
