@@ -11,7 +11,7 @@ starship init fish | source
 
 #These are vim/neovim aliases
 
-#alias vim='nvim' #makes vim command open neovim - vim can be opened using vi or /vim
+alias vim='nvim' #makes vim command open neovim - vim can be opened using vi or /vim
 alias svim='sudoedit' #opens sudo priveleges to edit -- changed EDITOR for sudoedit to neovim
 
 #These are exa/ls aliases
