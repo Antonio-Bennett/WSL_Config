@@ -90,7 +90,7 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach,
     init_options = {
       onlyAnalyzeProjectsWithOpenFiles = true,
-      suggestFromUnimportedLibraries = false,
+      suggestFromUnimportedLibraries = true,
       closingLabels = true
     }
   }
@@ -102,7 +102,7 @@ require('nlua.lsp.nvim').setup(require('lspconfig'), {
   on_attach = on_attach,
   init_options = {
     onlyAnalyzeProjectsWithOpenFiles = true,
-    suggestFromUnimportedLibraries = false,
+    suggestFromUnimportedLibraries = true,
     closingLabels = true
   }
 })
