@@ -1,3 +1,7 @@
+-- LspSaga default setup
+-- Using its functions in the keymaps
+require'lspsaga'.init_lsp_saga()
+
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   -- require('completion').on_attach() -- <- This is if u have completion nvim
@@ -10,11 +14,34 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   local opts = {noremap = true, silent = true}
   buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', 'gd',
+                 '<Cmd>lua require\'lspsaga.provider\'.preview_definition()<CR>',
+                 opts)
+  buf_set_keymap('n', '<leader>gd', '<Cmd>lua vim.lsp.buf.definition()<CR>',
+                 opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  buf_set_keymap('n', '<space>gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  buf_set_keymap('n', 'gh',
+                 '<cmd>lua require\'lspsaga.provider\'.lsp_finder()<CR>', opts)
+  buf_set_keymap('n', 'gs',
+                 '<cmd>lua require(\'lspsaga.signaturehelp\').signature_help()<CR>',
+                 opts)
+  buf_set_keymap('n', 'K',
+                 '<Cmd>lua require(\'lspsaga.hover\').render_hover_doc()<CR>',
+                 opts)
+  buf_set_keymap('n', '<C-f>',
+                 '<Cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(1)<CR>',
+                 opts)
+  buf_set_keymap('n', '<C-b>',
+                 '<Cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(-1)<CR>',
+                 opts)
+  buf_set_keymap('n', 'ca',
+                 '<cmd>lua require(\'lspsaga.codeaction\').code_action()<CR>',
+                 opts)
+  buf_set_keymap('v', 'ca',
+                 ':<C-U>lua require(\'lspsaga.codeaction\').code_action()<CR>',
+                 opts)
   buf_set_keymap('n', '<space>wa',
                  '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr',
@@ -22,19 +49,20 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>wl',
                  '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>',
                  opts)
-  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>',
+  buf_set_keymap('n', '<space>d', '<cmd>lua vim.lsp.buf.type_definition()<CR>',
                  opts)
-  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<space>d',
-                 '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+  buf_set_keymap('n', '<leader>cd',
+                 '<cmd>lua require\'lspsaga.diagnostic\'.show_line_diagnostics()<CR>',
+                 opts)
   -- show ^^ automatically on cursor hold
   vim.api.nvim_command(
-      [[autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()]])
+      [[autocmd CursorHold * lua require'lspsaga.diagnostic'.show_cursor_diagnostics()]])
   buf_set_keymap('n', '<space>gn',
-                 '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+                 '<cmd>lua require\'lspsaga.diagnostic\'.lsp_jump_diagnostic_next()<CR>',
+                 opts)
   buf_set_keymap('n', '<space>gp',
-                 '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+                 '<cmd>lua require\'lspsaga.diagnostic\'.lsp_jump_diagnostic_prev()<CR>',
+                 opts)
   buf_set_keymap('n', '<space>q',
                  '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 

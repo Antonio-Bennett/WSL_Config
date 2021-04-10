@@ -56,6 +56,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/lsp_extensions.nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
   ["nlua.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nlua.nvim"
