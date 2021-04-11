@@ -133,6 +133,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/trusty_rusty_snippets"
   },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-floaterm"
+  },
   ["vim-rooter"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-rooter"

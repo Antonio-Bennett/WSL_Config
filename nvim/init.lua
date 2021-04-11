@@ -18,7 +18,7 @@ require('p-vim_rooter')
 require('p-colorizer')
 require('p-lspkind')
 require('p-comment')
+require('p-floaterm')
 
 -- LSP
 require('lsp')
--- require('lsp.lua-ls')

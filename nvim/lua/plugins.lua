@@ -82,4 +82,7 @@ return require('packer').startup(function(use)
 
   -- Comment easily
   use {'terrortylor/nvim-comment'}
+
+  -- Floating terminal 
+  use {'voldikss/vim-floaterm'}
 end)
