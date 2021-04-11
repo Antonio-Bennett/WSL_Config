@@ -17,6 +17,7 @@ require('p-octo')
 require('p-vim_rooter')
 require('p-colorizer')
 require('p-lspkind')
+require('p-comment')
 
 -- LSP
 require('lsp')

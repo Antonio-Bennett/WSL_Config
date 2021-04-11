@@ -79,4 +79,7 @@ return require('packer').startup(function(use)
 
   -- Show colours of hex for example 
   use {'norcalli/nvim-colorizer.lua'}
+
+  -- Comment easily
+  use {'terrortylor/nvim-comment'}
 end)

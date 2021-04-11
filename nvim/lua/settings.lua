@@ -30,5 +30,7 @@ vim.o.updatetime = 300 -- Faster completion
 vim.o.timeoutlen = 500 -- By default timeoutlen is 1000 ms
 vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
 vim.cmd([[ let g:python3_host_prog = "/usr/bin/python3.9" ]]) -- python runtime
+vim.api.nvim_command(
+    [[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
 -- vim.cmd(':hi TabLineFill term=bold cterm=bold ctermbg=50') <- trying to fix the tab line bg
 -- vim.o.guifont = "JetBrainsMono NF"
