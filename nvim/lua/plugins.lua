@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   use {'neovim/nvim-lspconfig'}
   use {'tjdevries/nlua.nvim'}
   use {'glepnir/lspsaga.nvim'}
+  use {'onsails/lspkind-nvim'}
 
   -- Autocomplete with snippet stuff
   -- use {'nvim-lua/completion-nvim'}
