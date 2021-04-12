@@ -9,6 +9,9 @@ end
 #This is the theme
 starship init fish | source 
 
+#Lazygit alias 
+alias lg='lazygit'
+
 #These are vim/neovim aliases
 
 alias vim='nvim' #makes vim command open neovim - vim can be opened using vi or /vim
