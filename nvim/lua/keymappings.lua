@@ -1,15 +1,20 @@
-vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
+vim.api
+    .nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
 
 -- no hl
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>',
+                        {noremap = true, silent = true})
 
---Save/save and quit and quit
-vim.api.nvim_set_keymap('n', '<Leader>s', ':w<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<Leader>ss', ':wq<CR>', {noremap = true, silent = true})
+-- Save/save and quit and quit
+vim.api.nvim_set_keymap('n', '<Leader>s', ':w<CR>',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>ss', ':wq<CR>',
+                        {noremap = true, silent = true})
 
 -- explorer (set to NvimTreeToggle from Lexplore)
-vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>',
+                        {noremap = true, silent = true})
 
 -- better window movement
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
@@ -50,19 +55,26 @@ vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true, silent = true})
 
 -- Tab switch buffer
-vim.api.nvim_set_keymap('n', '<TAB>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-TAB>', '::BufferLineCyclePrev<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<TAB>', ':BufferLineCycleNext<CR>',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-TAB>', '::BufferLineCyclePrev<CR>',
+                        {noremap = true, silent = true})
 
 -- These commands will move the current buffer backwards or forwards in the bufferline
-vim.api.nvim_set_keymap('n', 'H', ':BufferLineMovePrev<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', 'L', ':BufferLineMoveNext<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'H', ':BufferLineMovePrev<CR>',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'L', ':BufferLineMoveNext<CR>',
+                        {noremap = true, silent = true})
 
---close the current buffer
-vim.api.nvim_set_keymap('n', '<Leader>c', ':bd<CR>', {noremap = true, silent = true})
+-- close the current buffer
+vim.api.nvim_set_keymap('n', '<Leader>c', ':bd<CR>',
+                        {noremap = true, silent = true})
 
 -- Move selected line / block of text in visual mode
-vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('x', 'J', ':move \'>+1<CR>gv-gv', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('x', 'J', ':move \'>+1<CR>gv-gv',
+                        {noremap = true, silent = true})
 
 -- Better nav for omnicomplete
 vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
