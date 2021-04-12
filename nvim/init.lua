@@ -19,6 +19,7 @@ require('p-lspkind')
 require('p-comment')
 require('p-floaterm')
 require('p-dashboard')
+require('p-indent')
 
 -- LSP
 require('lsp')

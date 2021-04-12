@@ -84,4 +84,7 @@ return require('packer').startup(function(use)
 
   -- Start screen 
   use {'glepnir/dashboard-nvim'}
+
+  -- Indent line
+  use {'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
 end)
