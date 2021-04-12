@@ -67,10 +67,6 @@ return require('packer').startup(function(use)
   -- Formatter
   use {'mhartington/formatter.nvim'}
 
-  -- Indent Lines
-  use {'Yggdroot/indentLine'}
-  use {'lukas-reineke/indent-blankline.nvim'}
-
   -- Auto pairs
   use {'windwp/nvim-autopairs'}
 
@@ -85,4 +81,7 @@ return require('packer').startup(function(use)
 
   -- Floating terminal 
   use {'voldikss/vim-floaterm'}
+
+  -- Start screen 
+  use {'glepnir/dashboard-nvim'}
 end)

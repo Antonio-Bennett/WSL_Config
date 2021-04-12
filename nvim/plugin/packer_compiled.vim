@@ -36,6 +36,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/formatter.nvim"
@@ -43,14 +47,6 @@ _G.packer_plugins = {
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
-  },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
-  },
-  indentLine = {
-    loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/indentLine"
   },
   ["lsp_extensions.nvim"] = {
     loaded = true,
