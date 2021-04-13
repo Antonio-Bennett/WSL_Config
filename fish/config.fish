@@ -9,6 +9,9 @@ end
 #This is the theme
 starship init fish | source 
 
+#set fish shell to vim binding
+fish_vi_key_bindings
+
 #Lazygit alias 
 alias lg='lazygit'
 
