@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
   use {'hrsh7th/vim-vsnip'}
   use {'hrsh7th/vim-vsnip-integ'}
   use {'polypus74/trusty_rusty_snippets'}
+  use {'Josee9988/Changelog-and-Markdown-snippets'}
 
   -- Colorscheme
   use {'tjdevries/colorbuddy.vim'}
@@ -87,4 +88,7 @@ return require('packer').startup(function(use)
 
   -- Indent line
   use {'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
+
+  -- Markdown preview
+  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
 end)

@@ -12,6 +12,8 @@ starship init fish | source
 #set fish shell to vim binding
 fish_vi_key_bindings
 
+alias chrome='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
+
 #Lazygit alias 
 alias lg='lazygit'
 

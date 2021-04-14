@@ -32,6 +32,10 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
+  ["Changelog-and-Markdown-snippets"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/Changelog-and-Markdown-snippets"
+  },
   ["colorbuddy.vim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
@@ -63,6 +67,10 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
   },
   ["nlua.nvim"] = {
     loaded = true,
