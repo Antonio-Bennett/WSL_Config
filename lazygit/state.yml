@@ -1,5 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/antonio/.config
+- /home/antonio/Projects/snipmate_vscode_parser
+- /home/antonio/Projects/vim-snipmate_to_vscSnippets
 - /home/antonio/LearningRust/Rust
 startuppopupversion: 4

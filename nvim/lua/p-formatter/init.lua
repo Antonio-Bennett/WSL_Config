@@ -1,5 +1,5 @@
 -- prettier-eslint
-local prettier = function()
+local prettierEs = function()
   return {
     exe = "prettier-eslint",
     args = {
@@ -19,6 +19,18 @@ require('formatter').setup({
         return {exe = "rustfmt", args = {"--emit=stdout"}, stdin = true}
       end
     },
+    -- toml = {
+    --   function()
+    --     return {
+    --       exe = "prettier",
+    --       args = {
+    --         "--stdin", "--stdin-filepath", vim.api.nvim_buf_get_name(0),
+    --         '--single-quote'
+    --       },
+    --       stdin = true
+    --     }
+    --   end
+    -- },
     lua = {
       -- lua-format from luarocks
       function()
@@ -27,13 +39,13 @@ require('formatter').setup({
     },
     -- javascriptjsx = {prettier},
     -- typescript.tsx = {prettier}
-    javascript = {prettier},
-    javascriptreact = {prettier},
-    typescript = {prettier},
-    typescriptreact = {prettier},
-    html = {prettier},
-    css = {prettier},
-    json = {prettier}
+    javascript = {prettierEs},
+    javascriptreact = {prettierEs},
+    typescript = {prettierEs},
+    typescriptreact = {prettierEs},
+    html = {prettierEs},
+    css = {prettierEs},
+    json = {prettierEs}
   }
 })
 

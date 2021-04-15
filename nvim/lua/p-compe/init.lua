@@ -13,6 +13,7 @@ require('compe').setup {
     nvim_lsp = true,
     -- vim_dadbod_completion = true;
     vsnip = true,
+    -- ultisnips = true,
     path = true,
     buffer = true,
     calc = true,
