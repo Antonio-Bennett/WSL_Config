@@ -13,5 +13,5 @@ vim.g.floaterm_height = 0.9
 vim.g.floaterm_autoclose = 1
 
 -- Open floaterm and run lazygit
-vim.api.nvim_set_keymap('n', '<Leader>fg', ':FloatermNew! lg<CR>',
+vim.api.nvim_set_keymap('n', '<Leader>lg', ':FloatermNew! lg<CR>',
                         {noremap = true, silent = true})
