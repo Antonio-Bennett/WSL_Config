@@ -91,4 +91,14 @@ return require('packer').startup(function(use)
 
   -- Markdown preview
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
+
+  -- Hop nvim to move in file easier	
+  use {
+    'phaazon/hop.nvim',
+    as = 'hop',
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup {keys = 'etovxqpdygfblzhckisuran', term_seq_bias = 0.5}
+    end
+  }
 end)

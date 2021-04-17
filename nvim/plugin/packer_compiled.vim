@@ -52,6 +52,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
+  hop = {
+    config = { "\27LJ\2\2j\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\2\18term_seq_bias\4\0€€€ÿ\3\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0" },
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/hop"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
@@ -159,6 +164,8 @@ _G.packer_plugins = {
   }
 }
 
+-- Config for: hop
+try_loadstring("\27LJ\2\2j\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\2\18term_seq_bias\4\0€€€ÿ\3\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0", "config", "hop")
 END
 
 catch

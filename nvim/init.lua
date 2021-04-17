@@ -21,6 +21,7 @@ require('p-dashboard')
 require('p-indent')
 require('p-markdown')
 require('p-kommentary')
+require('p-hop')
 
 -- LSP
 require('lsp')
