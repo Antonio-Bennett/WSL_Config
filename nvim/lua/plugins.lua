@@ -78,7 +78,7 @@ return require('packer').startup(function(use)
   use {'norcalli/nvim-colorizer.lua'}
 
   -- Comment easily
-  use {'terrortylor/nvim-comment'}
+  use {'b3nj5m1n/kommentary'}
 
   -- Floating terminal 
   use {'voldikss/vim-floaterm'}

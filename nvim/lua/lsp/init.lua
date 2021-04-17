@@ -133,7 +133,9 @@ require('nlua.lsp.nvim').setup(require('lspconfig'), {
     onlyAnalyzeProjectsWithOpenFiles = true,
     suggestFromUnimportedLibraries = true,
     closingLabels = true
-  }
+  },
+  maxPreload = 10000,
+  preloadFileSize = 10000
 }) -- ]]
 
 --[[

@@ -16,11 +16,11 @@ require('p-octo')
 require('p-vim_rooter')
 require('p-colorizer')
 require('p-lspkind')
-require('p-comment')
 require('p-floaterm')
 require('p-dashboard')
 require('p-indent')
 require('p-markdown')
+require('p-kommentary')
 
 -- LSP
 require('lsp')
