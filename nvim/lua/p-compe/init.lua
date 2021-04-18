@@ -25,23 +25,21 @@ require('compe').setup {
 }
 local npairs = require('nvim-autopairs')
 
---[[function imap(lhs, rhs, opts)
-    local options = {noremap = false}
-    if opts then options = vim.tbl_extend('force', options, opts) end
-    vim.api.nvim_set_keymap('i', lhs, rhs, options)
-end--]]
+local function imap(lhs, rhs, opts)
+  local options = {noremap = true, expr = true}
+  if opts then options = vim.tbl_extend('force', options, opts) end
+  vim.api.nvim_set_keymap('i', lhs, rhs, options)
+end --
 
 _G.MUtils = {}
 
+vim.g.completion_confirm_key = ""
 MUtils.completion_confirm = function()
   if vim.fn.pumvisible() ~= 0 then
     if vim.fn.complete_info()["selected"] ~= -1 then
-      vim.fn["compe#confirm"]()
-      return npairs.esc("")
+      return vim.fn["compe#confirm"](npairs.esc("<c-r>"))
     else
-      vim.fn.nvim_select_popupmenu_item(0, false, false, {})
-      vim.fn["compe#confirm"]()
-      return npairs.esc("<c-n>")
+      return npairs.esc("<cr>")
     end
   else
     return npairs.check_break_line_char()
@@ -75,12 +73,10 @@ MUtils.s_tab = function()
   end
 end
 
-vim.api.nvim_set_keymap("i", "<CR>", "v:lua.MUtils.completion_confirm()",
-                        {expr = true, noremap = true})
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.MUtils.tab()",
-                        {expr = true, noremap = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.MUtils.s_tab()",
-                        {expr = true, noremap = true})
+-- imap("<CR>", "compe#confirm()", {expr = true, noremap = true})
+imap("<CR>", "v:lua.MUtils.completion_confirm()", {expr = true, noremap = true})
+imap("<Tab>", "v:lua.MUtils.tab()", {expr = true, noremap = true})
+imap("<S-Tab>", "v:lua.MUtils.s_tab()", {expr = true, noremap = true})
 vim.api.nvim_set_keymap("s", "<CR>", "v:lua.MUtils.completion_confirm()",
                         {expr = true, noremap = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.MUtils.tab()",

@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
 
   -- Lsp
   use {'neovim/nvim-lspconfig'}
-  use {'tjdevries/nlua.nvim'}
+  use {'kabouzeid/nvim-lspinstall'}
   use {'glepnir/lspsaga.nvim'}
   use {'onsails/lspkind-nvim'}
 

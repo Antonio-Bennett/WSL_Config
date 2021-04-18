@@ -2,9 +2,7 @@
 -- Using its functions in the keymaps
 require'lspsaga'.init_lsp_saga()
 
-local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
-  -- require('completion').on_attach() -- <- This is if u have completion nvim
 
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -90,30 +88,26 @@ local on_attach = function(client, bufnr)
   end
 end
 
--- local nvim_lsp = require('lspconfig')
--- require'snippets'.use_suggested_mappings(true) -- for snippets.vim
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-
--- Code actions
-capabilities.textDocument.codeAction = {
-  dynamicRegistration = false,
-  codeActionLiteralSupport = {
-    codeActionKind = {
-      valueSet = {
-        "", "quickfix", "refactor", "refactor.extract", "refactor.inline",
-        "refactor.rewrite", "source", "source.organizeImports"
-      }
-    }
-  }
-}
-
--- Snippets
-capabilities.textDocument.completion.completionItem.snippetSupport = true;
-
 -- LSPs
-local servers = {"rust_analyzer", "tsserver", "html", "cssls"}
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
+local function make_config()
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  -- Code actions
+  capabilities.textDocument.codeAction =
+      {
+        dynamicRegistration = false,
+        codeActionLiteralSupport = {
+          codeActionKind = {
+            valueSet = {
+              "", "quickfix", "refactor", "refactor.extract", "refactor.inline",
+              "refactor.rewrite", "source", "source.organizeImports"
+            }
+          }
+        }
+      }
+  -- Snippets
+  capabilities.textDocument.completion.completionItem.snippetSupport = true;
+
+  return {
     capabilities = capabilities,
     on_attach = on_attach,
     init_options = {
@@ -124,8 +118,56 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- Configure lua language server for neovim development
+local lua_settings = {
+  Lua = {
+    runtime = {
+      -- LuaJIT in the case of Neovim
+      version = 'LuaJIT',
+      path = vim.split(package.path, ';')
+    },
+    diagnostics = {
+      -- Get the language server to recognize the `vim` global
+      globals = {'vim'}
+    },
+    workspace = {
+      -- Make the server aware of Neovim runtime files
+      library = {
+        [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+        [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true
+      },
+      maxPreload = 10000,
+      preloadFileSize = 10000
+    }
+  }
+}
+
+local function setup_servers()
+  require'lspinstall'.setup() -- important
+  local servers = require'lspinstall'.installed_servers()
+  for _, server in pairs(servers) do
+    local config = make_config()
+
+    if server == "lua" then config.settings = lua_settings end
+    require'lspconfig'[server].setup(config)
+  end
+end
+
+setup_servers()
+
+-- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+require'lspinstall'.post_install_hook = function()
+  setup_servers() -- reload installed servers
+  vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
+end
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
+                 {virtual_text = true, signs = true, update_in_insert = true})
+
 -- Lua LSP. NOTE: This replaces the calls where you would have before done `require('nvim_lsp').sumneko_lua.setup()`
----[[
+-- Enable diagnostics
+--[[
 require('nlua.lsp.nvim').setup(require('lspconfig'), {
   capabilities = capabilities,
   on_attach = on_attach,
@@ -147,8 +189,3 @@ require('nlua.lsp.nvim').setup(require('lspconfig'), {
     }
   end
   --]]
-
--- Enable diagnostics
-vim.lsp.handlers["textDocument/publishDiagnostics"] =
-    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
-                 {virtual_text = true, signs = true, update_in_insert = true})
