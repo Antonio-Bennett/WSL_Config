@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
   use {'kabouzeid/nvim-lspinstall'}
   use {'glepnir/lspsaga.nvim'}
   use {'onsails/lspkind-nvim'}
+  use {"ray-x/lsp_signature.nvim"}
 
   -- Autocomplete with snippet stuff
   -- use {'nvim-lua/completion-nvim'}
@@ -71,19 +72,16 @@ return require('packer').startup(function(use)
   -- Auto pairs
   use {'windwp/nvim-autopairs'}
 
-  -- Github Integration
-  use {'pwntester/octo.nvim'}
-
-  -- Show colours of hex for example 
+  -- Show colours of hex for example
   use {'norcalli/nvim-colorizer.lua'}
 
   -- Comment easily
   use {'b3nj5m1n/kommentary'}
 
-  -- Floating terminal 
+  -- Floating terminal
   use {'voldikss/vim-floaterm'}
 
-  -- Start screen 
+  -- Start screen
   use {'glepnir/dashboard-nvim'}
 
   -- Indent line
@@ -92,7 +90,7 @@ return require('packer').startup(function(use)
   -- Markdown preview
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
 
-  -- Hop nvim to move in file easier	
+  -- Hop nvim to move in file easier
   use {
     'phaazon/hop.nvim',
     as = 'hop',
