@@ -27,15 +27,17 @@ return require('packer').startup(function(use)
   use {'onsails/lspkind-nvim'}
   use {"ray-x/lsp_signature.nvim"}
 
-  -- Autocomplete with snippet stuff
-  -- use {'nvim-lua/completion-nvim'}
-  -- use {'SirVer/ultisnips'}
-  -- use {'honza/vim-snippets'}
+  -- Autocomplete
   use {'hrsh7th/nvim-compe'}
   use {'hrsh7th/vim-vsnip'}
   use {'hrsh7th/vim-vsnip-integ'}
-  use {'polypus74/trusty_rusty_snippets'}
-  use {'Josee9988/Changelog-and-Markdown-snippets'}
+
+  -- Snippets
+  use {'polypus74/trusty_rusty_snippets'} -- Rust
+  use {'Josee9988/Changelog-and-Markdown-snippets'} -- Markdown
+  use {'xabikos/vscode-javascript'} -- JavaScript
+  use {'abusaidm/html-snippets'} -- HTML have to uncomment snippets
+  use {'evondev/evondev-snippet'} -- Css
 
   -- Colorscheme
   use {'tjdevries/colorbuddy.vim'}
