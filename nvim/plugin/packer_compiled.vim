@@ -83,10 +83,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
-  ["evondev-snippet"] = {
-    loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/evondev-snippet"
-  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/formatter.nvim"
@@ -208,6 +204,10 @@ _G.packer_plugins = {
   ["vim-vsnip-integ"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
+  },
+  ["vsc-css-snippets"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vsc-css-snippets"
   },
   ["vscode-javascript"] = {
     loaded = true,
