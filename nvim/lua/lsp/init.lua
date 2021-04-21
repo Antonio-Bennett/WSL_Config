@@ -107,15 +107,7 @@ local function make_config()
   -- Snippets
   capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
-  return {
-    capabilities = capabilities,
-    on_attach = on_attach,
-    init_options = {
-      onlyAnalyzeProjectsWithOpenFiles = true,
-      suggestFromUnimportedLibraries = true,
-      closingLabels = true
-    }
-  }
+  return {capabilities = capabilities, on_attach = on_attach}
 end
 
 -- Configure lua language server for neovim development
