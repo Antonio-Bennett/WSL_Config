@@ -7,7 +7,7 @@ set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
 end
 
 # Add key to ssh agent
-ssh-add ~/.ssh/id_ed25519
+#ssh-add ~/.ssh/id_ed25519
 
 #This is the theme
 starship init fish | source 
