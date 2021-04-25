@@ -21,6 +21,7 @@ require('p-indent')
 require('p-markdown')
 require('p-kommentary')
 require('p-hop')
+require('p-neoscroll')
 
 -- LSP
 require('lsp')

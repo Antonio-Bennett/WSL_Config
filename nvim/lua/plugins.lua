@@ -100,4 +100,7 @@ return require('packer').startup(function(use)
       require'hop'.setup {keys = 'etovxqpdygfblzhckisuran', term_seq_bias = 0.5}
     end
   }
+
+  -- Smooth scroll
+  use {'karb94/neoscroll.nvim'}
 end)

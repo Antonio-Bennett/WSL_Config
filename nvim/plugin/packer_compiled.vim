@@ -128,6 +128,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/neoscroll.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-autopairs"

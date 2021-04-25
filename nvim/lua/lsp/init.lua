@@ -28,10 +28,10 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'K',
                  '<Cmd>lua require(\'lspsaga.hover\').render_hover_doc()<CR>',
                  opts)
-  buf_set_keymap('n', '<C-f>',
+  buf_set_keymap('n', '<C-d>',
                  '<Cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(1)<CR>',
                  opts)
-  buf_set_keymap('n', '<C-b>',
+  buf_set_keymap('n', '<C-u>',
                  '<Cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(-1)<CR>',
                  opts)
   buf_set_keymap('n', 'ca',
