@@ -103,4 +103,7 @@ return require('packer').startup(function(use)
 
   -- Smooth scroll
   use {'karb94/neoscroll.nvim'}
+
+  -- Vim register
+  use {'gennaro-tedesco/nvim-peekup'}
 end)
