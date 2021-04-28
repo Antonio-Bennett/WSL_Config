@@ -12,8 +12,9 @@ end
 #This is the theme
 starship init fish | source 
 
-#set fish shell to vim binding
-fish_vi_key_bindings
+#Update and upgrade
+alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'
 
 #Working with files and URLS: Chrome - Urls and open - Files
 alias chrome='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
