@@ -12,9 +12,13 @@ end
 #This is the theme
 starship init fish | source 
 
-#Update and upgrade
+#Update, upgrade, install, remove and delete
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
+alias install='sudo apt install'
+alias remove='sudo apt autoremove'
+alias delete_package='sudo ppa-purge'
+alias delete_program='sudo apt-get --purge remove'
 
 #Working with files and URLS: Chrome - Urls and open - Files
 alias chrome='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
