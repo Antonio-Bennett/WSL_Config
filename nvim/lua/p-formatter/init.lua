@@ -45,7 +45,8 @@ require('formatter').setup({
     typescriptreact = {prettierEs},
     html = {prettierEs},
     css = {prettierEs},
-    json = {prettierEs}
+    json = {prettierEs},
+    markdown = {prettierEs}
   }
 })
 
