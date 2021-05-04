@@ -55,6 +55,10 @@ vim.api.nvim_set_keymap('n', 'L', ':BufferLineMoveNext<CR>',
 vim.api.nvim_set_keymap('n', '<Leader>c', ':bd<CR>',
                         {noremap = true, silent = true})
 
+-- close all buffers except current
+vim.api.nvim_set_keymap('n', '<leader>ca', ':%bd|e#|bd#<CR>',
+                        {noremap = true, silent = true})
+
 -- Move selected line / block of text in visual mode
 vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv',
                         {noremap = true, silent = true})
