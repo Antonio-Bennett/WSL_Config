@@ -19,23 +19,15 @@ require('formatter').setup({
         return {exe = "rustfmt", args = {"--emit=stdout"}, stdin = true}
       end
     },
-    -- toml = {
-    --   function()
-    --     return {
-    --       exe = "prettier",
-    --       args = {
-    --         "--stdin", "--stdin-filepath", vim.api.nvim_buf_get_name(0),
-    --         '--single-quote'
-    --       },
-    --       stdin = true
-    --     }
-    --   end
-    -- },
     lua = {
       -- lua-format from luarocks
       function()
         return {exe = "lua-format", args = {"--indent-width=2"}, stdin = true}
       end
+    },
+    c = {function() return {exe = "clang-format", args = {}, stdin = true} end},
+    cpp = {
+      function() return {exe = "clang-format", args = {}, stdin = true} end
     },
     -- javascriptjsx = {prettier},
     -- typescript.tsx = {prettier}
@@ -47,6 +39,7 @@ require('formatter').setup({
     css = {prettierEs},
     json = {prettierEs},
     markdown = {prettierEs}
+    -- toml = {prettierEs}
   }
 })
 

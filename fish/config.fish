@@ -20,6 +20,19 @@ alias remove='sudo apt autoremove'
 alias delete_package='sudo ppa-purge'
 alias delete_program='sudo apt-get --purge remove'
 
+#Working with program install paths and dependencies
+alias list_files_of='dpkg -L'
+alias find_package='dpkg -l | grep'
+alias dependencies_of='apt-cache rdepends'
+
+#Fish working with paths
+alias list_path='echo $fish_user_paths | tr " " "\n" | nl'
+
+#Working with multiple versions of program [commonly python]
+alias list_alternatives='sudo update-alternatives --config'
+alias add_alternative='sudo update-alternatives --install'
+alias alternative_info='sudo update-alternatives --query'
+
 #Working with files and URLS: Chrome - Urls and open - Files
 alias chrome='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
 alias open='wslview'

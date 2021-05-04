@@ -213,9 +213,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   },
+  vimspector = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vimspector"
+  },
   ["vsc-css-snippets"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vsc-css-snippets"
+  },
+  ["vscode-cpp-snippets"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vscode-cpp-snippets"
   },
   ["vscode-javascript"] = {
     loaded = true,

@@ -38,6 +38,8 @@ return require('packer').startup(function(use)
   use {'xabikos/vscode-javascript'} -- JavaScript
   use {'abusaidm/html-snippets'} -- HTML have to uncomment snippets
   use {'joy-yu/vsc-css-snippets'} -- Css
+  use {'one-harsh/vscode-cpp-snippets'}
+
   -- Colorscheme
   use {'tjdevries/colorbuddy.vim'}
   use {'Th3Whit3Wolf/onebuddy'}
@@ -106,4 +108,7 @@ return require('packer').startup(function(use)
 
   -- Vim register
   use {'gennaro-tedesco/nvim-peekup'}
+
+  -- Debugging in neovim
+  use {'puremourning/vimspector'}
 end)
