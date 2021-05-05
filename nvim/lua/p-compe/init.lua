@@ -77,9 +77,9 @@ end
 imap("<CR>", "v:lua.MUtils.completion_confirm()", {expr = true, noremap = true})
 imap("<Tab>", "v:lua.MUtils.tab()", {expr = true, noremap = true})
 imap("<S-Tab>", "v:lua.MUtils.s_tab()", {expr = true, noremap = true})
-vim.api.nvim_set_keymap("s", "<CR>", "v:lua.MUtils.completion_confirm()",
+--[[ vim.api.nvim_set_keymap("s", "<CR>", "v:lua.MUtils.completion_confirm()",
                         {expr = true, noremap = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.MUtils.tab()",
                         {expr = true, noremap = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.MUtils.s_tab()",
-                        {expr = true, noremap = true})
+                        {expr = true, noremap = true}) ]]
