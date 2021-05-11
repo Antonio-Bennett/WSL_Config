@@ -27,3 +27,4 @@ require('p-rest_nvim')
 
 -- LSP
 require('lsp')
+require('p-lspinstall')
