@@ -111,4 +111,7 @@ return require('packer').startup(function(use)
 
   -- Debugging in neovim
   use {'puremourning/vimspector'}
+
+  -- Http Client
+  use {'NTBBloodbath/rest.nvim', requires = {'nvim-lua/plenary.nvim'}}
 end)

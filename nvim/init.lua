@@ -23,6 +23,7 @@ require('p-kommentary')
 require('p-hop')
 require('p-neoscroll')
 require('p-vimspector')
+require('p-rest_nvim')
 
 -- LSP
 require('lsp')
