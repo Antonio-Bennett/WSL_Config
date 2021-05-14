@@ -12,6 +12,9 @@ end
 #This is the theme
 starship init fish | source 
 
+#Use latest node
+nvm use latest 
+
 #Update, upgrade, install, remove and delete
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
@@ -31,7 +34,8 @@ alias list_path='echo $fish_user_paths | tr " " "\n" | nl'
 #Working with multiple versions of program [commonly python]
 alias list_alternatives='sudo update-alternatives --config'
 alias add_alternative='sudo update-alternatives --install'
-alias alternative_info='sudo update-alternatives --query'
+alias query_alternative='sudo update-alternatives --query'
+alias remove_alternative='sudo update-alternatives --remove'
 
 #Working with files and URLS: Chrome - Urls and open - Files
 alias chrome='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
