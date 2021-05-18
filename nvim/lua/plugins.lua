@@ -41,20 +41,19 @@ return require('packer').startup(function(use)
   use {'one-harsh/vscode-cpp-snippets'}
 
   -- Colorscheme
-  use {'tjdevries/colorbuddy.vim'}
-  use {'Th3Whit3Wolf/onebuddy'}
+  use {'folke/tokyonight.nvim'}
 
   -- File Explorer
   use {'kyazdani42/nvim-tree.lua'}
 
   -- Buffer tabs
-  use {
-    'akinsho/nvim-bufferline.lua',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
+  use {'romgrk/barbar.nvim'}
 
   -- Status Line
-  use {'glepnir/galaxyline.nvim'}
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
 
   -- Lua extended functions such as Rust in lay hints
   use {'nvim-lua/lsp_extensions.nvim'}

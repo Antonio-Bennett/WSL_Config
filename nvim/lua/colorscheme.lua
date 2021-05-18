@@ -1,3 +1,4 @@
-require('colorbuddy').colorscheme('onebuddy')
-vim.g.onebuddy_disable_italics = true
--- vim.cmd(':hi TabLineFill guifg=LightGreen guibg=DarkGreen ctermfg=LightGreen ctermbg=DarkGreen')
+vim.g.tokyonight_italic_comments = false
+vim.g.tokyonight_italic_keywords = false
+vim.g.tokyonight_sidebars = {"qf", "vista_kind", "terminal", "packer"}
+vim.cmd [[colorscheme tokyonight]]

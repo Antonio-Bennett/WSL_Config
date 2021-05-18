@@ -12,10 +12,6 @@ vim.api.nvim_set_keymap('n', '<Leader>s', ':w<CR>',
 vim.api.nvim_set_keymap('n', '<Leader>ss', ':wq<CR>',
                         {noremap = true, silent = true})
 
--- explorer (set to NvimTreeToggle from Lexplore)
-vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>',
-                        {noremap = true, silent = true})
-
 -- better window movement
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
@@ -40,15 +36,15 @@ vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true, silent = true})
 
 -- Tab switch buffer
-vim.api.nvim_set_keymap('n', '<TAB>', ':BufferLineCycleNext<CR>',
+vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>',
                         {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-TAB>', '::BufferLineCyclePrev<CR>',
+vim.api.nvim_set_keymap('n', '<S-TAB>', '::BufferPrevious<CR>',
                         {noremap = true, silent = true})
 
 -- These commands will move the current buffer backwards or forwards in the bufferline
-vim.api.nvim_set_keymap('n', 'H', ':BufferLineMovePrev<CR>',
+vim.api.nvim_set_keymap('n', 'H', ':BufferMovePrevious<CR>',
                         {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', 'L', ':BufferLineMoveNext<CR>',
+vim.api.nvim_set_keymap('n', 'L', ':BufferMoveNext<CR>',
                         {noremap = true, silent = true})
 
 -- close the current buffer

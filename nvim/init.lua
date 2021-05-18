@@ -6,8 +6,9 @@ require('colorscheme')
 
 -- Plugins
 require('p-compe')
-require('p-bufferline')
-require('p-galaxyline')
+require('p-nvimtree')
+require('p-barbar')
+require('p-lualine')
 require('p-lsp_extensions')
 require('p-telescope')
 require('p-treesitter')

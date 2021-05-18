@@ -75,9 +75,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/Changelog-and-Markdown-snippets"
   },
-  ["colorbuddy.vim"] = {
+  ["barbar.nvim"] = {
     loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
   ["dashboard-nvim"] = {
     loaded = true,
@@ -86,10 +86,6 @@ _G.packer_plugins = {
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/formatter.nvim"
-  },
-  ["galaxyline.nvim"] = {
-    loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
   hop = {
     config = { "\27LJ\2\2j\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\2\18term_seq_bias\4\0€€€ÿ\3\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0" },
@@ -124,6 +120,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+  },
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
@@ -135,10 +135,6 @@ _G.packer_plugins = {
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
-  },
-  ["nvim-bufferline.lua"] = {
-    loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
@@ -172,10 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
-  onebuddy = {
-    loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/onebuddy"
-  },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -196,6 +188,10 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
   },
   trusty_rusty_snippets = {
     loaded = true,
