@@ -21,6 +21,7 @@ require('compe').setup {
     spell = true,
     tags = true,
     treesitter = true
+    -- tabnine = true
   }
 }
 local npairs = require('nvim-autopairs')
