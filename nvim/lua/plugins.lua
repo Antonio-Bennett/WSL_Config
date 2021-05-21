@@ -109,7 +109,9 @@ return require('packer').startup(function(use)
   use {'gennaro-tedesco/nvim-peekup'}
 
   -- Debugging in neovim
-  use {'puremourning/vimspector'}
+  use {'mfussenegger/nvim-dap'}
+  use {'theHamsta/nvim-dap-virtual-text'}
+  use {'rcarriga/nvim-dap-ui'}
 
   -- Http Client
   use {'NTBBloodbath/rest.nvim', requires = {'nvim-lua/plenary.nvim'}}
