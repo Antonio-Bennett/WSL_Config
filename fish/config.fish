@@ -20,7 +20,7 @@ alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias install='sudo apt install'
 alias remove='sudo apt autoremove'
-alias delete_package='sudo ppa-purge'
+alias delete_ppa='sudo ppa-purge'
 alias delete_program='sudo apt-get --purge remove'
 
 #Working with program install paths and dependencies

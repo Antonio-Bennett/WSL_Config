@@ -19,12 +19,14 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {silent = true})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
 
 -- resize with arrows
-vim.cmd([[
-  nnoremap <silent> <C-Up>    :resize -2<CR>
-  nnoremap <silent> <C-Down>  :resize +2<CR>
-  nnoremap <silent> <C-Left>  :vertical resize -2<CR>
-  nnoremap <silent> <C-Right> :vertical resize +2<CR>
-]])
+vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +2<CR>',
+                            {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -2<CR>',
+                            {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize +2<CR>',
+                            {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize -2<CR>',
+                            {noremap = true, silent = true})
 
 -- better indenting
 vim.api.nvim_set_keymap('v', '<', '<gv', {noremap = true, silent = true})

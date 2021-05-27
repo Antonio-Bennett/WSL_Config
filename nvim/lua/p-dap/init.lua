@@ -14,6 +14,8 @@ vim.api.nvim_set_keymap('n', '<leader>lp',
                         opts)
 vim.api.nvim_set_keymap('n', '<leader>dl', ':lua require"dap".run_last()<CR>',
                         opts)
+vim.api.nvim_set_keymap('n', '<leader>dc', ':lua require"dapui".toggle()<CR>',
+                        opts)
 
 -- This is for the virtual text
 vim.g.dap_virtual_text = true
