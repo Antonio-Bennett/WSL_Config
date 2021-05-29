@@ -115,4 +115,7 @@ return require('packer').startup(function(use)
 
   -- Http Client
   use {'NTBBloodbath/rest.nvim', requires = {'nvim-lua/plenary.nvim'}}
+
+  -- Task manager
+  use {'marcushwz/nvim-workbench'}
 end)

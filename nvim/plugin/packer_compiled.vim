@@ -180,6 +180,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
+  ["nvim-workbench"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-workbench"
+  },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
