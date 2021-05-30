@@ -75,6 +75,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/Changelog-and-Markdown-snippets"
   },
+  ["FTerm.nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/FTerm.nvim"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/barbar.nvim"
@@ -212,10 +216,6 @@ _G.packer_plugins = {
   trusty_rusty_snippets = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/trusty_rusty_snippets"
-  },
-  ["vim-floaterm"] = {
-    loaded = true,
-    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/vim-floaterm"
   },
   ["vim-rooter"] = {
     loaded = true,

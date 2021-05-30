@@ -81,7 +81,7 @@ return require('packer').startup(function(use)
   use {'b3nj5m1n/kommentary'}
 
   -- Floating terminal
-  use {'voldikss/vim-floaterm'}
+  use {'numToStr/FTerm.nvim'}
 
   -- Start screen
   use {'glepnir/dashboard-nvim'}

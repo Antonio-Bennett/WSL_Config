@@ -1,4 +1,4 @@
-MUtils.toggle = function()
+MUtils.nvim_tree_toggle = function()
   local open = function()
     require'bufferline.state'.set_offset(31)
     require'nvim-tree'.find_file(true)
@@ -23,5 +23,6 @@ MUtils.toggle = function()
   end
 end
 
-vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd> lua MUtils.toggle()<CR>',
+vim.api.nvim_set_keymap('n', '<Leader>e',
+                        '<cmd> lua MUtils.nvim_tree_toggle()<CR>',
                         {noremap = true, silent = true})

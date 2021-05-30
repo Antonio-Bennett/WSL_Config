@@ -1,13 +1,16 @@
 vim.opt.iskeyword:append{"-"} -- treat dash separated words as a word text object"
-vim.cmd('set shortmess+=c')
--- vim.opt.shortmess:append{"c"} -- Don't pass messages to |ins-completion-menu|.
+vim.opt.shortmess:append{c = true} -- Don't pass messages to |ins-completion-menu|.
 vim.opt.hidden = true -- Required to keep multiple buffers open multiple buffers
-vim.opt.wrap = false -- Display long lines as just one line
-vim.cmd('set whichwrap+=<,>,[,],h,l')
--- vim.opt.whichwrap:append {"<", ">", "[", "]", "h", "l"} -- move to next line with theses keys
+vim.opt.wrap = true -- Display long lines as just one line
+vim.opt.whichwrap:append{
+  ['<'] = true,
+  ['>'] = true,
+  [','] = true,
+  h = true,
+  l = true
+} -- move to next line with theses keys
 vim.opt.syntax = "on" -- syntax highlighting
 vim.cmd('filetype plugin indent on') -- file type identification, plugin and indenting
--- vim.opt.filetype = {plugin = "on", indent = "on"}
 vim.opt.pumheight = 10 -- Makes popup menu smaller
 vim.opt.fileencoding = "utf-8" -- The encoding written to file
 vim.opt.cmdheight = 2 -- More space for displaying messages
