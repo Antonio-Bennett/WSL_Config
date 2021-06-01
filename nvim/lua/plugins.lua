@@ -118,4 +118,7 @@ return require('packer').startup(function(use)
 
   -- Task manager
   use {'marcushwz/nvim-workbench'}
+
+  -- Interactive swapping of functions arguments, parameters and etc
+  use {'mizlan/iswap.nvim'}
 end)

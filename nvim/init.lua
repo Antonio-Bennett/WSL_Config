@@ -26,6 +26,7 @@ require('p-neoscroll')
 require('p-dap')
 require('p-rest_nvim')
 require('p-nvim_workbench')
+require('p-Iswap')
 
 -- LSP
 require('lsp')

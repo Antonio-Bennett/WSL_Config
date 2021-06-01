@@ -104,6 +104,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
+  ["iswap.nvim"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/iswap.nvim"
+  },
   kommentary = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/kommentary"
