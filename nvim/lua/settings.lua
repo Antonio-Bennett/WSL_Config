@@ -33,19 +33,33 @@ vim.opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shi
 vim.opt.updatetime = 300 -- Faster completion
 vim.opt.timeoutlen = 500 -- By default timeoutlen is 1000 ms
 vim.opt.clipboard = "unnamedplus" -- Copy paste between vim and everything else
-vim.cmd([[
-set undodir=~/.config/nvim/.vim-undo-dir
-set undofile
-]])
-vim.cmd([[ let g:python3_host_prog = "/usr/bin/python" ]]) -- python runtime
+vim.opt.undodir = "~/.config/nvim/.vim-undo-dir"
+vim.opt.undofile = true
+vim.g.python3_host_prog = "/usr/bin/python" -- python runtime
 vim.api.nvim_command(
     [[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
 vim.cmd([[
 :set number relativenumber
 
+fun! Rel()
+    " Don't set on these filetypes
+    if &ft =~ 'dashboard'
+        return
+    endif
+    set relativenumber
+endfun
+
+fun! NoRel()
+    " Don't set on these filetypes
+    if &ft =~ 'dashboard'
+        return
+    endif
+    set norelativenumber
+endfun
+
 :augroup numbertoggle
 :  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:  autocmd BufEnter,FocusGained,InsertLeave * call Rel()
+:  autocmd BufLeave,FocusLost,InsertEnter   * call NoRel()
 :augroup END
 ]])
