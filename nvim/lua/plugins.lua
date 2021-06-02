@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 
   -- Icons
   use {'kyazdani42/nvim-web-devicons'}
+  use {'yamatsum/nvim-nonicons'}
 
   -- Lsp
   use {'neovim/nvim-lspconfig'}

@@ -172,6 +172,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
+  ["nvim-nonicons"] = {
+    loaded = true,
+    path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-nonicons"
+  },
   ["nvim-peekup"] = {
     loaded = true,
     path = "/home/antonio/.local/share/nvim/site/pack/packer/start/nvim-peekup"
