@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
 
   -- Icons
   use {'kyazdani42/nvim-web-devicons'}
-  use {'yamatsum/nvim-nonicons'}
 
   -- Lsp
   use {'neovim/nvim-lspconfig'}
@@ -115,11 +114,15 @@ return require('packer').startup(function(use)
   use {'rcarriga/nvim-dap-ui'}
 
   -- Http Client
-  use {'NTBBloodbath/rest.nvim', requires = {'nvim-lua/plenary.nvim'}}
+  use {'NTBBloodbath/rest.nvim', requires = 'nvim-lua/plenary.nvim'}
 
   -- Task manager
   use {'marcushwz/nvim-workbench'}
 
   -- Interactive swapping of functions arguments, parameters and etc
   use {'mizlan/iswap.nvim'}
+
+  -- Email client
+  use {'~/.local/share/nvim/site/pack/packer/start/himalaya/vim'}
+  use {'soywod/himalaya'}
 end)

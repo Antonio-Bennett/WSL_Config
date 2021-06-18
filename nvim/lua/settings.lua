@@ -43,7 +43,7 @@ vim.cmd([[
 
 fun! Rel()
     " Don't set on these filetypes
-    if &ft =~ 'dashboard'
+    if &ft =~ 'dashboard\|NvimTree'
         return
     endif
     set relativenumber

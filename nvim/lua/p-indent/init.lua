@@ -2,7 +2,7 @@ vim.g.indent_blankline_buftype_exclude = {'terminal'}
 vim.g.indent_blankline_filetype_exclude =
     {
       'man', 'help', 'startify', 'dashboard', 'packer', 'neogitstatus',
-      'markdown'
+      'markdown', 'NvimTree'
     }
 vim.g.indent_blankline_char = '▏'
 vim.g.indent_blankline_space_char = '.'
