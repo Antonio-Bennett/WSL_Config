@@ -13,7 +13,10 @@ end
 starship init fish | source 
 
 #Use latest node
-nvm use latest >/dev/null
+# nvm use latest >/dev/null
+
+#General purpose aliases
+alias c="clear"
 
 #Update, upgrade, install, remove and delete
 alias update='sudo apt-get update'

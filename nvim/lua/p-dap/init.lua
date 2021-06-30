@@ -23,14 +23,18 @@ vim.g.dap_virtual_text = true
 -- This is dap ui default setup
 require("dapui").setup()
 
+-- Language adapters and configs
+require("p-dap.c_c++_rust")
+
 -- Run the debug adapters and configurations
 
--- C/C++
-vim.cmd [[
+-- C/C++ and Rust
+--[[ vim.cmd [[
     command! -complete=file -nargs=* DebugC lua require "p-dap.c_c++".start_c_debugger({<f-args>}, "gdb")
 ]]
+-- ]]
 
 -- RUST
-vim.cmd [[
+--[[ vim.cmd [[
     command! -complete=file -nargs=* DebugRust lua require "p-dap.rust".start_rust_debugger({<f-args>}, "gdb", "rust-gdb")
-]]
+]] -- ]]

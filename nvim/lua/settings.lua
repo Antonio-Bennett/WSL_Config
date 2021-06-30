@@ -14,7 +14,7 @@ vim.cmd('filetype plugin indent on') -- file type identification, plugin and ind
 vim.opt.pumheight = 10 -- Makes popup menu smaller
 vim.opt.fileencoding = "utf-8" -- The encoding written to file
 vim.opt.cmdheight = 2 -- More space for displaying messages
--- vim.o.mouse = "a" -- Enable your mouse
+vim.o.mouse = "a" -- Enable your mouse
 vim.opt.splitbelow = true -- Horizontal splits will automatically be below
 vim.opt.termguicolors = true -- set term giu colors most terminals support this
 vim.opt.splitright = true -- Vertical splits will automatically be to the right
@@ -43,7 +43,7 @@ vim.cmd([[
 
 fun! Rel()
     " Don't set on these filetypes
-    if &ft =~ 'dashboard\|NvimTree'
+    if &ft =~ 'dashboard\|NvimTree\|markdown'
         return
     endif
     set relativenumber
@@ -51,7 +51,7 @@ endfun
 
 fun! NoRel()
     " Don't set on these filetypes
-    if &ft =~ 'dashboard'
+    if &ft =~ 'dashboard\|NvimTree\|markdown'
         return
     endif
     set norelativenumber

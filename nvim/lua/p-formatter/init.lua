@@ -2,10 +2,7 @@
 local prettierEs = function()
   return {
     exe = "prettier-eslint",
-    args = {
-      "--stdin", "--stdin-filepath", vim.api.nvim_buf_get_name(0),
-      '--single-quote'
-    },
+    args = {"--stdin", "--stdin-filepath", vim.api.nvim_buf_get_name(0)},
     stdin = true
   }
 end
@@ -38,7 +35,8 @@ require('formatter').setup({
     html = {prettierEs},
     css = {prettierEs},
     json = {prettierEs},
-    markdown = {prettierEs}
+    markdown = {prettierEs},
+    svelte = {prettierEs}
     -- toml = {prettierEs}
   }
 })

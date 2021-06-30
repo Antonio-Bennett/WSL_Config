@@ -38,7 +38,8 @@ return require('packer').startup(function(use)
   use {'xabikos/vscode-javascript'} -- JavaScript
   use {'abusaidm/html-snippets'} -- HTML have to uncomment snippets
   use {'joy-yu/vsc-css-snippets'} -- Css
-  use {'one-harsh/vscode-cpp-snippets'}
+  use {'one-harsh/vscode-cpp-snippets'} -- C++
+  use {'https://github.com/fivethree-team/vscode-svelte-snippets'} -- Svelte
 
   -- Colorscheme
   use {'folke/tokyonight.nvim'}
@@ -121,8 +122,4 @@ return require('packer').startup(function(use)
 
   -- Interactive swapping of functions arguments, parameters and etc
   use {'mizlan/iswap.nvim'}
-
-  -- Email client
-  use {'~/.local/share/nvim/site/pack/packer/start/himalaya/vim'}
-  use {'soywod/himalaya'}
 end)

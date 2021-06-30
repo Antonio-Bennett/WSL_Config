@@ -18,7 +18,7 @@ require('compe').setup {
     buffer = true,
     calc = true,
     nvim_lua = true,
-    spell = true,
+    -- spell = true,
     tags = true,
     treesitter = true
     -- tabnine = true
