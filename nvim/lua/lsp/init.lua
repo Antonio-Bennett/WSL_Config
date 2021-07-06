@@ -86,6 +86,8 @@ local on_attach = function(client, bufnr)
       augroup END
     ]], false)
   end
+
+  require'lsp_signature'.on_attach()
 end
 
 -- LSPs
@@ -142,7 +144,6 @@ local function setup_servers()
 
     if server == "lua" then config.settings = lua_settings end
     require'lspconfig'[server].setup(config)
-    require'lsp_signature'.on_attach()
   end
 end
 
