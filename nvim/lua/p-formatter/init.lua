@@ -2,7 +2,10 @@
 local prettierEs = function()
   return {
     exe = "prettier-eslint",
-    args = {"--stdin", "--stdin-filepath", vim.api.nvim_buf_get_name(0)},
+    args = {
+      "--stdin", "--stdin-filepath", vim.api.nvim_buf_get_name(0),
+      "--single-quote", "--tab-width 4"
+    },
     stdin = true
   }
 end

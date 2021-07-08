@@ -1,6 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/antonio/.config
+- /home/antonio/Learning/GraphQL/GraphQl-Tutorial
+- /home/antonio/Projects/Svelte/sveltkit-pokedex
 - /home/antonio/Projects/Rust/tic_tac_toe
 - /home/antonio/Learning/Rust
 - /home/antonio/.local/share/nvim/site/pack/packer/start/vimspector
