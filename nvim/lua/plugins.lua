@@ -40,6 +40,10 @@ return require('packer').startup(function(use)
   use {'joy-yu/vsc-css-snippets'} -- Css
   use {'one-harsh/vscode-cpp-snippets'} -- C++
   use {'https://github.com/fivethree-team/vscode-svelte-snippets'} -- Svelte
+  use {
+    'dsznajder/vscode-es7-javascript-react-snippets',
+    run = 'yarn install --frozen-lockfile && yarn compile'
+  }
 
   -- Colorscheme
   use {'folke/tokyonight.nvim'}
